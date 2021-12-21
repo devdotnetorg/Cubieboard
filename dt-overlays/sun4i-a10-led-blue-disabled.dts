@@ -1,0 +1,24 @@
+/*
+* DevDotNet.ORG <anton@devdotnet.org>
+*
+* MIT License
+* 
+* Device: Integrated blue LED
+*/
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "gpio-leds";
+	
+	fragment@0 {
+		target-path = "/leds/";
+		__overlay__ {
+			blue {				
+				//turn off the device
+				status = "disabled";			
+			};
+		};
+	};
+};
